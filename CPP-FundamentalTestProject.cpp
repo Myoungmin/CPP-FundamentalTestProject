@@ -1,20 +1,35 @@
-﻿// CPP-FundamentalTestProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿#include <iostream>
+#include <string>
 
-#include <iostream>
+void MakeStringAndShow();
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	MakeStringAndShow();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void MakeStringAndShow()
+{
+	int number = 12;
+	std::string stringNumber = std::to_string(number);
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	// 시행 착오 /////////////////////////////////////////////////////////////////////////////////
+	
+	//const char* stringToChar = ("DeviceName" + stringNumber + "appendedName").c_str();
+	 
+	// 처음에 위와 같이 출력하려고 했으나 제대로된 문자열이 출력되지 않았다.
+	// c_str()은 원본 객체가 담고있는 문자열에 대해 const char* 타입을 리턴한다.
+	// 이 값은 원본 객체인 'string이 메모리를 재할당'받거나 'string 객체가 사라지는 순간' 무효화된다.
+	// 그래서 메모리에 할당하지 않고 임시로 만든 문자열은 제대로 출력할 수가 없다.
+	 
+	//////////////////////////////////////////////////////////////////////////////////////////////
+
+	std::string device = "DeviceName";
+	std::string appendedString = "appendedName";
+
+	std::string completeString = device + stringNumber + appendedString;
+
+	const char* stringToChar = completeString.c_str();
+
+	std::cout << stringToChar << std::endl;
+}

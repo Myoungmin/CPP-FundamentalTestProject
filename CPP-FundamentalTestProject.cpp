@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include "ChronoVectorLoop.h"
 
 void MakeStringAndShow();
 void IF_LogicalOperator();
@@ -7,7 +8,8 @@ void IF_LogicalOperator();
 int main()
 {
 	//MakeStringAndShow();
-	IF_LogicalOperator();
+	//IF_LogicalOperator();
+	ChronoVectorLoop();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

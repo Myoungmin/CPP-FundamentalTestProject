@@ -12,6 +12,9 @@ void ChronoVectorLoop()
 
 	std::vector<int> nums(n, 1);
 
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	/* vector 인덱스 기반으로 순회하는 시간 측정 */
 
 	auto start = std::chrono::high_resolution_clock::now();
 
@@ -28,4 +31,29 @@ void ChronoVectorLoop()
 	std::chrono::duration<double> diff = end - start;
 
 	std::cout << "Index Loop : " << diff.count() << "s" << std::endl;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	/* vector 이터레이터 기반으로 순회하는 시간 측정 */
+
+	start = std::chrono::high_resolution_clock::now();
+
+	for (int i = 0; i < 1000; i++)
+	{
+		for (auto itr = nums.begin(); itr < nums.end(); itr++)
+		{
+			(*itr) *= 2;
+		}
+	}
+
+	end = std::chrono::high_resolution_clock::now();
+
+	diff = end - start;
+
+	std::cout << "Iterator Loop : " << diff.count() << "s" << std::endl;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }

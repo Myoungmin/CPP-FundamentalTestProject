@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChronoVectorLoop.h" />
+    <ClInclude Include="OptimallySetMemberString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

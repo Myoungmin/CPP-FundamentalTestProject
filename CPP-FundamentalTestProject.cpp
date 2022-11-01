@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include "ChronoVectorLoop.h"
+#include "OptimallySetMemberString.h"
 
 void MakeStringAndShow();
 void IF_LogicalOperator();
@@ -9,7 +10,8 @@ int main()
 {
 	//MakeStringAndShow();
 	//IF_LogicalOperator();
-	ChronoVectorLoop();
+	//ChronoVectorLoop();
+	OptimallySet();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

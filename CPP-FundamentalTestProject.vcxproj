@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConstTest.cpp" />
     <ClCompile Include="CPP-FundamentalTestProject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChronoVectorLoop.h" />
+    <ClInclude Include="ConstTest.h" />
     <ClInclude Include="OptimallySetMemberString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

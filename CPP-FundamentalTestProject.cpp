@@ -2,16 +2,19 @@
 #include <string>
 #include "ChronoVectorLoop.h"
 #include "OptimallySetMemberString.h"
+#include "ConstTest.h"
 
 void MakeStringAndShow();
 void IF_LogicalOperator();
+void TestConstTest();
 
 int main()
 {
 	//MakeStringAndShow();
 	//IF_LogicalOperator();
 	//ChronoVectorLoop();
-	OptimallySet();
+	//OptimallySet();
+	TestConstTest();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,6 +91,53 @@ void IF_LogicalOperator()
 	}
 
 	std::cout << "////////// if문 안에 AND 연산자 실습 종료 ///////////" << std::endl;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+void TestConstTest()
+{
+	ConstTest constTest;
+
+	std::string string1 = "string1";
+	const std::string string2 = "string2";
+
+	// 일반 string Argument 가능
+	constTest.setName(string1);
+	constTest.printName();
+
+	// const string Argument 가능
+	constTest.setName(string2);
+	constTest.printName();
+
+	// r-value string Argument 가능
+	constTest.setName("string3");
+	constTest.printName();
+
+	std::string valueString = constTest.getNameRef();	// 일반 변수에는 const ref가 영향이 없이 복사가 일어난다.
+	//std::string& refString = constTest.getNameRef();		// 일반 ref에는 const ref 반환하는 함수의 리턴을 받지 못한다.
+	const std::string& constRefString = constTest.getNameRef();		// const ref에서는 리턴 받을 수 있다.
+	//constRefString = "changed";	// const Ref의 값을 수정하지 못함
+
+	std::vector<std::string> vector1 = { "str1", "str1", "str1" };
+	const std::vector<std::string> vector2 = { "str2", "str2", "str2" };
+
+	constTest.setNameFromVect(vector1);
+	constTest.printName();
+	std::cout << vector1[0] << std::endl;
+	//constTest.setNameFromVect(vector2);		//	const vector가 일반 ref 파라미터에 입력되지 않는다.
+
+	std::vector<std::string> vector3 = { "str3", "str3", "str3" };
+	const std::vector<std::string> vector4 = { "str4", "str4", "str4" };
+
+	constTest.setNameFromConstVect(vector3);	// const ref로 파라미터가 설정되어 입력 값이 변경이 안되는 것을 보장한다.
+	constTest.printName();
+	constTest.setNameFromConstVect(vector4);	// 당연히 const vector라 변경이 안일어난다.
+	constTest.printName();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

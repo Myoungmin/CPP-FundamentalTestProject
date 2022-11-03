@@ -18,12 +18,18 @@
     <ClCompile Include="CPP-FundamentalTestProject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ConstTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChronoVectorLoop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OptimallySetMemberString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

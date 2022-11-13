@@ -3,6 +3,7 @@
 #include "ChronoVectorLoop.h"
 #include "OptimallySetMemberString.h"
 #include "ConstTest.h"
+#include "DelegatingConstructor.h"
 
 void MakeStringAndShow();
 void IF_LogicalOperator();
@@ -14,7 +15,8 @@ int main()
 	//IF_LogicalOperator();
 	//ChronoVectorLoop();
 	//OptimallySet();
-	TestConstTest();
+	//TestConstTest();
+	DelegatingConstructor();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -35,5 +35,8 @@
     <ClInclude Include="DelegatingConstructor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LoopTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

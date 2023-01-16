@@ -6,6 +6,7 @@
 #include "OptimallySetMemberString.h"
 #include "ConstTest.h"
 #include "DelegatingConstructor.h"
+#include "LoopTest.h"
 
 void MakeStringAndShow();
 void IF_LogicalOperator();
@@ -22,7 +23,8 @@ int main()
 	//TestConstTest();
 	//DelegatingConstructor();
 	//SystemMethodTest();
-	OMPParrallelTest();
+	//OMPParrallelTest();
+	LoopTest();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

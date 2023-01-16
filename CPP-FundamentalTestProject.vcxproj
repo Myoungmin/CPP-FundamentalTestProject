@@ -147,6 +147,7 @@
     <ClInclude Include="ChronoVectorLoop.h" />
     <ClInclude Include="ConstTest.h" />
     <ClInclude Include="DelegatingConstructor.h" />
+    <ClInclude Include="LoopTest.h" />
     <ClInclude Include="OptimallySetMemberString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
